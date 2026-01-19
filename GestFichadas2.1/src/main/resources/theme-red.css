@@ -1,0 +1,85 @@
+.root {
+    -fx-font-family: "Segoe UI", Arial;
+    -fx-background-color: #dadada;
+}
+
+
+.button {
+    -fx-background-color: #ed5352;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 4px 8px;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+
+}
+
+.button:hover {
+    -fx-background-color: white;
+    -fx-text-fill: #e85350;
+    -fx-border-color: black;
+    -fx-border-radius: 5;
+    -fx-border-width: 1px;
+    -fx-padding: 4px 8px;
+}
+
+.label, .title-label {
+    -fx-font-weight: bold;
+}
+
+.title-label {
+    -fx-font-size: 16px;
+}
+
+.date-picker {
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-color: #e53935;
+    -fx-padding: 2px 2px;
+}
+
+.text-field, .password-field {
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-color: #e53935;
+}
+
+.label {
+    -fx-text-fill: #000000;
+}
+
+/* Fondo del área de encabezados */
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+/* Cada header individual */
+.table-view .column-header {
+    -fx-background-color: #e53935; /* rojo */
+}
+
+/* Texto del header */
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Esquina vacía (cuando no hay columnas para completar espacio) */
+.table-view .filler {
+    -fx-background-color: #e53935;
+}
+
+.table-view .column-header {
+    -fx-border-color: black;
+    -fx-border-width: 0 1 0 0; /* arriba 0, derecha 1px, abajo 0, izquierda 0 */
+}
+
+:focused {
+    -fx-focus-color: transparent; /* Esto quita el borde azul */
+    -fx-faint-focus-color: transparent; /* Esto quita el borde delgado azul */
+}
+
+
+

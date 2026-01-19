@@ -1,0 +1,15 @@
+@echo off
+setlocal
+
+REM Carpeta donde está el BAT
+set SCRIPT_DIR=%~dp0
+
+REM Ir a la carpeta del proyecto (por si lo llaman desde otro lado)
+cd /d "%SCRIPT_DIR%"
+
+REM Ejecutar el jar con todas las dependencias
+java -jar "target\GestFichadas-1.0-jar-with-dependencies.jar"
+
+echo.
+echo Aplicacion finalizada. Presione una tecla para salir...
+pause >nul
