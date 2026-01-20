@@ -11,7 +11,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import org.example.service.ControlIdClient;
+import org.example.service.IControlIdClient;
 import java.time.*;
 import java.time.LocalDate;
 import java.util.*;
@@ -20,10 +20,10 @@ import java.util.*;
 public class MainView {
 
     private final BorderPane root = new BorderPane();
-    private final ControlIdClient api;
+    private final IControlIdClient api;
     private final ObservableList<CalcRow> rows = FXCollections.observableArrayList();
 
-    public MainView(ControlIdClient api) {
+    public MainView(IControlIdClient api) {
         this.api = api;
 
         DatePicker dpFrom = new DatePicker(LocalDate.now().withDayOfMonth(1));

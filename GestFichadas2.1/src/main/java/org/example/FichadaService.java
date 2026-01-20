@@ -11,19 +11,19 @@ public class FichadaService {
        Parámetros configurables
        ========================= */
 
-    // Ventana para ENTRADAS del mismo día
-    public static final LocalTime IN_WINDOW_START   = LocalTime.of(6, 0);   // 06:00
-    public static final LocalTime IN_WINDOW_END     = LocalTime.of(11, 30);  // 12:00
+// Ventana para ENTRADAS del mismo día (más flexible)
+    public static final LocalTime IN_WINDOW_START   = LocalTime.of(5, 0);   // 05:00
+    public static final LocalTime IN_WINDOW_END     = LocalTime.of(14, 0);   // 14:00
 
     // A partir de esta hora buscamos SALIDAS del mismo día
-    public static final LocalTime OUT_WINDOW_START  = LocalTime.of(11, 31);  // 12:00
+    public static final LocalTime OUT_WINDOW_START  = LocalTime.of(14, 1);  // 14:01
 
-    // Límite para permitir “cruce” de salida al día siguiente
-    public static final LocalTime OUT_NEXTDAY_LIMIT = LocalTime.of(7, 0);   // 07:00
+    // Límite para permitir "cruce" de salida al día siguiente
+    public static final LocalTime OUT_NEXTDAY_LIMIT = LocalTime.of(8, 0);   // 08:00
 
-    // Filtro de sanidad para la duración (opcional; podés aflojarlo)
-    public static final long MIN_SESSION_HOURS = 3;
-    public static final long MAX_SESSION_HOURS = 12;
+    // Filtro de sanidad para la duración (más flexible)
+    public static final long MIN_SESSION_HOURS = 2;
+    public static final long MAX_SESSION_HOURS = 16;
 
     /* =========================
        Método ORIGINAL (lo dejo igual)

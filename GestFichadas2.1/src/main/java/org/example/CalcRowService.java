@@ -1,6 +1,6 @@
 package org.example;
 
-import org.example.service.ControlIdClient;
+import org.example.service.IControlIdClient;
 import java.time.*;
 import java.time.temporal.TemporalAdjusters;
 import java.util.*;
@@ -13,7 +13,7 @@ public class CalcRowService {
      * tal como hoy las arma MainView (incluye tardanza/extra/neto/estado).
      */
 
-    public static List<MainView.CalcRow> loadRows(ControlIdClient api,
+    public static List<MainView.CalcRow> loadRows(IControlIdClient api,
                                                   LocalDate from,
                                                   LocalDate to) throws Exception {
 

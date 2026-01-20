@@ -23,7 +23,7 @@ import java.util.*;
  * - Login, /users y /access_logs (con WHERE en formato ARRAY).
  * - Ajuste horario vía TIME_OFFSET_MIN (si el reloj guarda UTC).
  */
-public class ControlIdClient {
+public class ControlIdClient implements IControlIdClient {
 
     private final ObjectMapper mapper = new ObjectMapper();
     private final String baseUrl;     // ej: "http://192.168.88.240"

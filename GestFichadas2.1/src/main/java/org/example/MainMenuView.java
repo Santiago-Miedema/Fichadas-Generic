@@ -11,7 +11,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import org.example.service.ControlIdClient;
+import org.example.service.IControlIdClient;
 
 import java.time.LocalDate;
 import java.util.*;
@@ -19,7 +19,7 @@ import java.util.*;
 public class MainMenuView {
 
     private final BorderPane root = new BorderPane();
-    private final ControlIdClient api;
+    private final IControlIdClient api;
 
     private final LocalDate from;
     private final LocalDate to;
@@ -38,7 +38,7 @@ public class MainMenuView {
     private Set<LocalDate> feriadosSeleccionados = new HashSet<>();
     private List<HolidayPickerView.HolidaySlot> feriadosConHorario = new ArrayList<>();
 
-    public MainMenuView(ControlIdClient api, LocalDate from, LocalDate to) {
+    public MainMenuView(IControlIdClient api, LocalDate from, LocalDate to) {
         this.api = api;
         this.from = from;
         this.to   = to;

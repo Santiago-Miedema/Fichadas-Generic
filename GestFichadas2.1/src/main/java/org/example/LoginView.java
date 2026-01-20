@@ -15,7 +15,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import org.example.service.ControlIdClient;
+import org.example.service.IControlIdClient;
+import org.example.service.ControlIdClientExcel;
 import java.util.Objects;
 
 public class LoginView {
@@ -77,7 +78,16 @@ public class LoginView {
             btn.setDisable(true);
             info.setText("Conectando...");
             new Thread(() -> {
-                ControlIdClient client = new ControlIdClient("http://192.168.88.240");
+                System.out.println("=== LoginView ===");
+                System.out.println("Directorio de trabajo: " + System.getProperty("user.dir"));
+                
+                // Crear ruta absoluta para el archivo Excel
+                String excelPath = System.getProperty("user.dir") + "/datos.xlsx";
+                System.out.println("Ruta del Excel: " + excelPath);
+                
+                System.out.println("Creando cliente ControlIdClientExcel...");
+                IControlIdClient client = new ControlIdClientExcel(excelPath);
+                System.out.println("Cliente creado: " + client.getClass().getSimpleName());
                 boolean ok = client.login(user.getText(), pass.getText());
                 Platform.runLater(() -> {
                     btn.setDisable(false);

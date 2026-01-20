@@ -8,7 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import org.example.service.ControlIdClient;
+import org.example.service.IControlIdClient;
 
 import java.time.LocalDate;
 
@@ -16,7 +16,7 @@ public class DateRangeView {
 
     private final BorderPane root = new BorderPane();
 
-    public DateRangeView(Stage stage, ControlIdClient api) {
+    public DateRangeView(Stage stage, IControlIdClient api) {
 
         // ⛔ No permitir agrandar ventana
         stage.setResizable(false);
